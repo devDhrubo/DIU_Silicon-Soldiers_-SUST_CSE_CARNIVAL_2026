@@ -1,17 +1,11 @@
 from typing import Literal, Optional
-from pydantic import BaseModel, Field
-
-
-# ── Request ────────────────────────────────────────────────────────────────────
+from pydantic import BaseModel
 
 class TicketRequest(BaseModel):
-    ticket_id: str = Field(..., description="Unique ticket identifier, echoed in response")
+    ticket_id: str
     channel: Optional[Literal["app", "sms", "call_center", "merchant_portal"]] = None
     locale: Optional[Literal["bn", "en", "mixed"]] = None
-    message: str = Field(..., min_length=1, description="Free-text customer complaint")
-
-
-# ── Response ───────────────────────────────────────────────────────────────────
+    message: str
 
 CaseType = Literal[
     "wrong_transfer",
@@ -30,7 +24,6 @@ Department = Literal[
     "fraud_risk",
 ]
 
-
 class TicketResponse(BaseModel):
     ticket_id: str
     case_type: CaseType
@@ -38,4 +31,4 @@ class TicketResponse(BaseModel):
     department: Department
     agent_summary: str
     human_review_required: bool
-    confidence: float = Field(..., ge=0.0, le=1.0)
+    confidence: float
