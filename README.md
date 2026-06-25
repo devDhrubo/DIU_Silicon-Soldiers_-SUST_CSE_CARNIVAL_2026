@@ -13,8 +13,8 @@ A simple FastAPI service to classify customer support tickets into `case_type`, 
 ## How to run locally
 
 ```bash
-git clone <your-repo>
-cd queuestorm-api
+git clone https://github.com/devDhrubo/DIU_Silicon-Soldiers_-SUST_CSE_CARNIVAL_2026.git
+cd DIU_Silicon-Soldiers_-SUST_CSE_CARNIVAL_2026
 
 python3 -m venv venv
 source venv/bin/activate
