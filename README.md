@@ -33,9 +33,6 @@ curl -s -X POST http://localhost:8000/sort-ticket \
   -d '{"ticket_id":"T-001","message":"I sent 3000 to wrong number"}'
 ```
 
-## Deployment on Render
+## Deployment
 
-1. Push to GitHub
-2. Go to render.com -> New Web Service
-3. Build command: `pip install -r requirements.txt`
-4. Start command: `uvicorn main:app --host 0.0.0.0 --port $PORT`
+Live URL: https://diu-silicon-soldiers-sust-cse-carnival-01v6.onrender.com (auto-deploys from main)
