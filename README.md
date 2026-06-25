@@ -35,4 +35,4 @@ curl -s -X POST http://localhost:8000/sort-ticket \
 
 ## Deployment
 
-Live URL: https://diu-silicon-soldiers-sust-cse-carnival-01v6.onrender.com (auto-deploys from main)
+Live URL: https://diu-silicon-soldiers-sust-cse-carnival.onrender.com/
