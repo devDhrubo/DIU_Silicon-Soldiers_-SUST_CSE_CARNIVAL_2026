@@ -17,6 +17,14 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.get("/")
+def read_root():
+    return {
+        "message": "QueueStorm API is running",
+        "docs": "/docs",
+        "health": "/health"
+    }
+
 @app.get("/health")
 def health():
     return {"status": "ok", "service": "queuestorm-classifier"}
